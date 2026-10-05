@@ -12,14 +12,14 @@
 @keyframes pipelineFlow{0%{opacity:.35;transform:scaleX(.88)}50%{opacity:1;transform:scaleX(1)}100%{opacity:.35;transform:scaleX(.88)}}
 @keyframes cardShimmer{0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
 
-.architecture{background:radial-gradient(ellipse at 50% 50%,#162744 0%,#0e192d 48%,#0b1120 78%);background-size:140% 140%;animation:ambientGlow 18s ease-in-out infinite}
+.architecture{background:radial-gradient(ellipse at calc(50% + var(--pointer-x,0px)) calc(50% + var(--pointer-y,0px)),#162744 0%,#0e192d 48%,#0b1120 78%);background-size:140% 140%;animation:ambientGlow 18s ease-in-out infinite}
 .arch-lines{animation:architectureDrift 14s ease-in-out infinite}
 .arch-lines:before{animation:architectureDrift 18s ease-in-out infinite reverse}
 .arch-lines:after{animation:architectureDrift 22s ease-in-out infinite}
 .arch-hub{animation:architecturePulse 4s ease-in-out infinite}
 .arch-status i{animation:statusPulse 2s ease-in-out infinite}
-.arch-node{transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
-.arch-node:hover{transform:translateY(-5px) scale(1.04);border-color:#3978f6;box-shadow:0 16px 40px #0005,0 0 24px #3978f625}
+.arch-node{translate:var(--parallax-x,0px) var(--parallax-y,0px);transition:translate .35s cubic-bezier(.2,.8,.2,1),transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
+.arch-node:hover{translate:var(--parallax-x,0px) calc(var(--parallax-y,0px) - 5px);transform:scale(1.04);border-color:#3978f6;box-shadow:0 16px 40px #0005,0 0 24px #3978f625}
 .project-card,.skill-card,.credential,.leadership-grid article,.paper{position:relative;overflow:hidden}
 .project-card:before,.skill-card:before,.credential:before,.leadership-grid article:before,.paper:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 35%,#ffffff08 50%,transparent 65%);transform:translateX(-120%);transition:transform .7s ease}
 .project-card:hover:before,.skill-card:hover:before,.credential:hover:before,.leadership-grid article:hover:before,.paper:hover:before{transform:translateX(120%)}
