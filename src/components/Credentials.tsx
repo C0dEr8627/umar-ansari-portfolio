@@ -11,7 +11,14 @@ function Credentials() {
         <div className="credential-layout">
           <div className="credentials">
             {credentials.map((credential) => (
-              <div className="credential" key={credential.title}>
+              <a
+                className="credential"
+                key={credential.title}
+                href={credential.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`View ${credential.title} on Credly`}
+              >
                 <img
                   className="credential-badge"
                   src={`${import.meta.env.BASE_URL}assets/credentials/${credential.image}`}
@@ -20,7 +27,7 @@ function Credentials() {
                 />
                 <div><strong>{credential.title}</strong><small>{credential.meta}</small></div>
                 <b aria-hidden="true">↗</b>
-              </div>
+              </a>
             ))}
           </div>
           <aside className="recognition">
