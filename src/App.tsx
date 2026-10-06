@@ -24,13 +24,6 @@ const projects = [
 'AWS Secrets Manager is used for sensitive application credentials instead of embedding secrets in source code or deployment configuration.',
 'Engineering focus: network isolation, horizontal scaling, load distribution, managed database operations, secret handling and repeatable deployment.'
 ],visual:'cloud'},
-  {n:'04',type:'FINANCIAL SYSTEMS · PROFESSIONAL EXPERIENCE',title:'Reconciliation Platform',sub:'Intelligent Accounting Workflows',desc:'A collaborative workbook platform that parses financial documents and supports automated reconciliation with confidence scoring.',stack:['Next.js','Node.js','Python','Tailwind CSS'],detail:[
-'Workbook-oriented financial workflow platform designed to move reconciliation work from raw financial documents into a structured, reviewable workspace.',
-'Document ingestion supports PDF, CSV and XLSX sources, followed by parsing and normalization so heterogeneous financial records can be compared through a common internal representation.',
-'The reconciliation workflow matches records and produces confidence scoring and recommendations rather than hiding the underlying decision, allowing users to review uncertain results.',
-'Manual overrides provide a controlled path for human decisions, while intelligent classification helps organize transactions and reduce repetitive processing.',
-'The platform also includes workbook sharing, archival and export workflows, connecting automated processing with the operational needs of a collaborative accounting system.'
-],visual:'finance'},
   {n:'05',type:'AI · PRIVATE DOCUMENT MEMORY',title:'LexiVault',sub:'Grounded Document Intelligence',desc:'A private document memory platform that turns text-based PDFs into searchable knowledge and grounded conversational answers.',stack:['Next.js 15','Supabase','Gemini','Pinecone','LangSmith'],detail:[
 'LexiVault is a private, user-scoped document memory system built with Next.js 15 App Router and React 19. The MVP intentionally supports text-based PDFs and does not attempt OCR, multi-provider LLMs, reranking, hybrid search or agentic workflows.',
 'PDFs are uploaded through the authenticated application, processed into searchable chunks and associated with the owning user. Supabase provides authentication, database persistence and storage.',
